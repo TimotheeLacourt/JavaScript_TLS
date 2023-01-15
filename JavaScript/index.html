@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheLastSpaceman</title>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <img id="logoIIM" src="img/Titre TLS.png">
+            <h1 id="titre">The Last Spaceman</strong> </h1>
+            <p id="connexion">Acheter :</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/Aff 1.png">
+                    
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Aff 2.png">
+                    
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/Aff 3.png">
+                    
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div id="métier">
+            <h2>Sortie du jeu :</h2>
+        </div>
+
+        <div id="axe">
+            <H1 id="sortie">12 Septembre 2023</H1>
+        </div>
+
+
+        <form action="">
+            <fieldset>
+                <legend>Pré-Inscription BetaTest du jeu</legend>
+                <p id="messageErreur"></p>
+
+                <label for="nom">Nom</label>
+                <input type="text" id="nom">
+    
+                <label for="prénom">Prénom</label>
+                <input type="text" id="prénom">
+
+                <label for="email">E-mail</label>
+                <input type="mail" id="email" placeholder="prénom.nom@gmail.com">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Niveau actuelle</legend>
+
+                <input type="radio" id="choix1" name="contact" value="premiere">
+                <label for="choix1">Inéxpérimenté</label>
+
+                <input type="radio" id="choix2" name="contact" value="terminale">
+                <label for="choix2">Faible</label>
+
+                <input type="radio" id="choix3" name="contact" value="annéepréparatoire">
+                <label for="choix3">Moyen</label>
+
+                <input type="radio" id="choix4" name="contact" value="deuxièmeannée">
+                <label for="choix4">Bon</label>
+
+                <input type="radio" id="choix5" name="contact" value="troisièmeannée">
+                <label for="choix5">Très bon</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Êtes-vous streamer ou youtubeurs ?</legend>
+
+                <input type="radio" id="choix1" name="contact" value="premiere">
+                <label for="choix1">oui</label>
+
+                <input type="radio" id="choix2" name="contact" value="terminale">
+                <label for="choix2">non</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Jeu préféré ?</legend>
+
+                <label for="JVpref">Indique quel est ton jeu vidéo favori ?</label>
+                <input type="text" id="nom">
+                
+
+    
+            </fieldset>
+            <input type="submit" value="envoyer" id="bt">
+        </form>
+
+<div id="reseaux">
+
+  <textarea id="textExample" rows="5" cols="60">Si vous voulez en savoir plus ou avez des questions n'hesitez pas à nous suivre sur les reseaux sociaux tels que twitter ou instagram. Vous pouvez également regarder des extraits exclusifs sur youtube en attendant la précommande du jeu. Alors, prêt à vous envoler ?
+  </textarea>
+
+  <button onclick="animateText(textExample)">D'autres informations ?</button>
+
+  <script>
+    function animateText(textArea) {
+      let text = textArea.value;
+      let to = text.length,
+        from = 0;
+
+      animate({
+        duration: 5000,
+        timing: bounce,
+        draw: function(progress) {
+          let result = (to - from) * progress + from;
+          textArea.value = text.slice(0, Math.ceil(result))
+        }
+      });
+    }
+
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+  </script>
+
+</div>
+
+    </main>
+
+    <footer>
+        <div id="communication">
+            <section id="contact">
+                <p>Nous contacter :</p>
+                <p>0907657854</p>
+                <p>Support@TLS.fr</p>
+            </section>
+
+            <section id="logo">
+                <img class="minia" src="img/PinClipart.com_harry-potter-lightning.png">
+                <img class="minia" src="img/52053.png">
+                <img class="minia" src="img/kisspng-computer-icons-logo-instagram-blanc.png">
+            </section>
+
+            <section id="école">
+                <p>Merci d'avoir visionné notre site web</p>
+                <p>Bureau de Développement TLS</p>
+                <p>30 072 Bordeaux</p>
+            </section>
+        </div>
+
+        <div id="digital">
+            <p>© 2023 TLS – THE LAST SPACEMAN Online Battle Royal </p>
+        </div>
+
+        
+    
+
+</html>
+        
+        <div class="mode">
+            <p class="modeAffichage">Mode d'affichage :</p>
+            <button onclick="modeSombre()">Mode sombre</button>
+            <button onclick="modeLumineux()">Mode lumineux</button>
+        </div>
+
+         
+
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
